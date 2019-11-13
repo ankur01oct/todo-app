@@ -5,17 +5,19 @@ import {repeat} from "lit-html/directives/repeat";
 class TodoItem extends LitElement{
     static get properties() {
         return {
-            todoItem: Object
+            todoItem: {
+                type:Object,
+                value: {item : ''},
+            }
         }
     }
 
     constructor(){
         super();
-        this.todoItem ={}
     }
 
     render(){
-        console.log(this.todoItem.item);
+        console.log(this.todoItem + '---------');
         return html`
         <li>${this.todoItem.item}</li>
         `;

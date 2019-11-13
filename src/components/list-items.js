@@ -18,8 +18,8 @@ class ListItems extends LitElement{
         console.log((this.todoList))
         return html`
         <ul>${repeat((this.todoList), (todo) => {
-            console.log(todo.item);
-            return html`<todo-item todoItem=${todo}></todo-item>`}
+            console.log(todo);
+            return html`<todo-item .todoItem=${todo}></todo-item>`}
         )}</ul>
         `;
 
